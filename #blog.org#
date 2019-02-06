@@ -18,11 +18,6 @@
 #+html: <div id="ugeek"><a href="index.html" title="uGeek"><tt>uGeek</tt></a></div>
 #+html:<br><br><br><br><br><br><br><br><br><br>                                                                                             
 
-
-
-
-
-
 * TODO Eliminar líneas en Blanco con sed
 :PROPERTIES:
 :TITLE: Eliminar líneas en Blanco con sed

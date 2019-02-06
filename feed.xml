@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>uGeek - Blog de Tecnología</title>
+    <link>https://ugeek.github.io/blog</link>
+    <description>Blog de Tecnología, Android, GNU Linux, Servidores, y mucho más. Blog vinculado al Blog del Podcast de uGeek</description>
+    <image>
+       <url>https://ugeek.github.io/blog/ugeek.png</url>
+       <title>uGeek - Blog de Tecnología</title>
+       <link>https://ugeek.github.io/blog</link>
+    </image>
+    <language>es</language>
+    <atom:link href="https://ugeek.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
+    <generator>org-bash-blog static site generator (https://github.com/ugeek/org-bash-blog)</generator>
+   <item>
+    <title>Eliminar líneas en Blanco con sed</title>
+    <link>https://ugeek.github.io/blog/post/2018-12-27-eliminar-lineas-en-blanco.html</link>
+    <description>Como podemos eliminar líneas en Blanco</description>
+    <pubDate>Thu, 27 Dec 2018 18:00 +0100</pubDate>
+    <guid>https://ugeek.github.io/blog/post/2018-12-27-eliminar-lineas-en-blanco.html</guid>
+   </item>
+   <item>
+    <title>:TITLE: Data Science para la prevención de accidentes y la detección de catástrofes naturales</title>
+    <link>https://ugeek.github.io/blog/post/ :EXPORT_DATE: 2017-09-11--:export_file_name:-datascience-prevencion-accidentes-deteccion-catastrofes-naturales.html</link>
+    <description> :DESCRIPTION: Chalra del grupo Data Science Spain</description>
+    <pubDate></pubDate>
+    <guid>https://ugeek.github.io/blog/post/ :EXPORT_DATE: 2017-09-11--:export_file_name:-datascience-prevencion-accidentes-deteccion-catastrofes-naturales.html</guid>
+   </item>
+  </channel>
+</rss>

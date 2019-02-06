@@ -1,0 +1,255 @@
+#icon+TITLE: uGeek - Blog de Tecnología
+#+LINK: https://ugeek.github.io/blog
+#+DESCRIPTION: Blog de Tecnología, Android, GNU Linux, Servidores, y mucho más. Blog vinculado al Blog del Podcast de uGeek
+#+KEYWORDS: GNU, linux, Raspberry, android, domótica 
+#+AUTHOR: Angel
+#+LANGUAGE: es
+#+STARTUP: logdone
+#+STARTUP: inlineimages
+#+OPTIONS: toc:t num:nil ^:nil toc:nil title:nil author:nil date:nil created:nil'
+#+startup: hideblocks
+#+HTML_HEAD: <div id="logo"><a href="index.html"><img src="__img/icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="__css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.gitlab.io/feed.xml" title="uGeek - Blog de Tecnología">   
+#+HTML_HEAD:  
+#+html: <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'/>
+#+html: <div id="name"><a href="index.html"><tt>Blog de Tecnología</tt></div></a>
+#+html: <div id="icon"><a href="https://ugeek.github.io/podcast.xml" title="rss"><img src="__img/icon/podcast.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="feed.xml"><img src="__img/icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="__img/icon/twitter.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="__img/icon/telegram.png"  width="25" height="25" alt="uGeek"></a></div>
+#+html: <div id="menu"><a href="list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;&nbsp;<a href="tag.html"><tt>Tags</tt></a>&nbsp;&nbsp;&nbsp;<a href="https://ugeek.github.io/"><tt>Podcast</tt></a></div>
+#+html: <div id="ugeek"><a href="index.html" title="uGeek"><tt>uGeek</tt></a></div>
+#+html:<br><br><br><br><br><br><br><br><br><br>                                                                                             
+
+;; Comienzo de entradas
+* TODO Aprendizaje de hábitos con org-mode.
+:PROPERTIES:
+:TITLE: Hábitos con org-mode.
+:EXPORT_FILE_NAME: habitos_con_org-mode
+:DESCRIPTION: Como usar org-mode para modificar hábitos
+:EXPORT_DATE: 2019-01-27
+:CATEGORY: emacs
+:TAG: org-mode,hábitos,mejora_personal
+:END:
+** Introducción.
+
+Cuando hablamos de "*mejora personal*", utilizar un sistema como GTD es fundamental para realizar un  seguimiento de las acciones realizadas, lo que favorece la revisión y el análistis de nuestras buenas y malas prácticas.  Dentro de estas acciones hay una serie de ellas, conocidas como hábitos, que son una base fundamental de nuestro día a día,  y nos condicionan mucho más de lo que pensamos.  Pero ¿que son los hábitos?.
+
+Si atendemos a su definición un *habito* sería una "/habilidad adquirida por la práctica constante de una misma acción/".  Esto implica dos cosas:
+
+- Que es una práctica constante
+- Que se adquiere por repetición.
+
+No debemos olvidar que esto *hábitos* pueden ser tanto beneficiosos como perjudiciales para nuestra mejora personal, por lo que uno de nuestros objetivos habituales debiera ser desprendernos de aquellos que nos alejan de lo que queremos y practicar lo que nos acerque a ello.
+
+Es obvio que la mejor forma de recordar estas *acciones* que queremos desarrollar es mantenerlas registradas en nuestro sistema, lo que resulta muy sencillo en *org-mode* gracias a su capacidad de definir *acciones recurrentes*.  Esto nos permitirá tener la seguridad de que si renunciamos a ponerlo en práctica un día determinado al menos habrá sido de forma consciente, no por que el ruido que nos rodea nos haga olvidarla
+
+No hay que olvidar que el objetivo de desarrollar hábitos es interiorizar su ejecución de forma que sean innecesarios los recordatorios, pero para ello es necesaria una constancia durante un tiempo, estimado habitualmente entre los 21 y 30 días, que permita dicha interiorización.  Es por ello que todo aprendizaje de un nuevo hábito implica:
+
+- Un compromiso personal inequívoco con la adquisición/modificación del hábito
+- Una forma sencilla de monitorizar el progreso en dicho objetivo
+
+*** No rompas la cadena.
+
+*No romper la cadena* es uno de los principios fundamentales para desarrollar un hábito.  La experiencia demuestra que esta técnica, usada en muchas áreas diferentes, cómo hacer ejercicio, para aprender programación, o para cualquier otro objetivo es fundamental.
+
+El motivo de que funcione es que cómo dice la famosa frase "*Un viaje de mil millas empieza con un paso*", y obviamente necesita de los siguientes.  No son los deseos o impulsos los que nos hacen avanzar sino la acción diaria, bien enfocada, la que genera la consecución de nuestros objetivos, por extraordinarios que estos nos puedan parecer.
+
+Vamos por tanto a ver en esta entrada algunas ideas de cómo podemos aprovechar nuestro *org-mode* para mejorar nuestros hábitos, para hacer el seguimiento de las correspondientes cadenas, a ver si conseguimos desprendernos de los malos hábitos y sustituirlos por otros que nos ayuden a conseguir nuestras metas.
+
+*** Repetir acciones.
+
+Cómo hemos dicho un hábito es algo que nos gustaría hacer, o dejar de hacer, de forma asidua o, al menos, con una cierta frecuencia, es decir necesitamos programarlos como acciones repetitivas, lo que en *org-mode es muy sencillo, pero para empezar recordemos las combinaciones de teclas más habituales para incluir fechas:
+
+#+BEGIN_EXAMPLE
+  De Carácter general:
+
+  - *C-c .* Inserta en el punto una marca de tiempo en formato *<fecha>*, que aparecerá en la agenda, o modifia la existente cuando el cursor está en una marca de tiempo existente.  Si se usa dos veces se inserta un rango de tiempo.
+  - *C-c !* Inserta una marca de tiempo del tipo [fecha].  Esta es una marca inactiva que no causará una entrada en la agenda.
+
+  Sobre acciones: 
+
+  - *C-c C-d*  (org-deadline) Inserta una fecha de vencimiento mediante la palabra clave *DEADLINE* y su fecha asociada. Dependiendo de la variable *org-log-redeadline*, realizará un registro de cambios en la misma.
+  - *C-c C-s* (org-schedule) Inserta una fecha programada mediante la palabra clave *SCHEDULED* y la fecha. Dependiendo de la variable *org-log-reprchedule*, se registrarán o no los cambios realizados en una fecha existente.
+  - *C-c / d* (org-check-deadlines) Cree un resumen con todos los plazos vencidos o vencidos dentro de los días de advertencia.  Con el prefijo *C-u*, muestra todos los plazos en el archivo. Con un prefijo numérico muestra los vencimientos en los días señalados, por ejemplo, *C-1 C-c / d* muestra todos los plazos que vencen mañana.
+  - *C-c / b* (org-check-before-date)  Crea un resumen para todas las fechas límite y elementos programados antes de una fecha determinada.
+  - *C-c / a* (org-check-after-date) Crea un resumen de fechas límite y elementos programados después de una fecha determinada.
+
+  No olvidar que org-schedule y org-deadline admiten la configuración de la fecha indicando una hora relativa: por ejemplo, +1d establecerá la fecha al día siguiente a partir de hoy, y –1w establecerá la fecha en la semana anterior antes de cualquier marca de tiempo actual.
+#+END_EXAMPLE
+
+Veamos ahora un ejemplo:
+
+#+BEGIN_EXAMPLE
+  ** HACER: Pagar alquiler plaza de garaje
+     SCHEDULED: <fecha +1m>
+#+END_EXAMPLE
+
+Hemos incluido en la acción una fecha de vencimiento y una repetición, en este caso mensual (+1m).  Estas repeticiones pueden incluir tanto en fecha de vencimiento, *DEADLINE*,  cómo de agenda, *SCHEDULED*.
+
+El +1m es un repetidor; la interpretación que se pretende es que la acción tiene una *fecha*, en el formato habitual de *org-mode*   y se repite cada mes a partir de ese momento. Se pueden usar marcas de repetición anuales, mensuales, semanales, diarias y por hora utilizando las letras *y/w/m/d/h*.  También podemos ajustar un aviso, incluyendo su valor tras el repetidor por ejemplo:
+
+#+BEGIN_EXAMPLE
+  ** HACER: Pagar alquiler plaza de garaje
+     DEADLINE: <fecha +1m -5d>
+#+END_EXAMPLE
+
+En este caso la interpretación sería que la acción tiene una fecha de vencimiento, con repetición mensual y que debe avisarme en la agenda 5 días antes de que se produzca.
+
+Todas las acciones con fechas límite y programadas generan una entrada en la agenda siempre que no estén ya ejecutadas.  El problema con este tipo de entradas repetitivas es que la siguiente instancia de la entrada repetida no estaría activa, ya que si marcamos la entrada como *DONE* usando la combinación habitual *C-c C-t* la fecha se desplaza según el intervalo del repetidor y permanece en estado *HACER:*, es decir, que en el ejemplo anterior, establecer el estado en *DONE* lo que haría realmente es dejar la acción pendiente con fecha *<fecha+1m>*.
+
+Para solucionar esto el modo org establece un sistema de marcado especial para esta acción que es el siguiente *C--1 C-c C-t*, es decir, la marca habitual de org-todo con prefijo numérico de -1.  esto realiza las siguientes acciones:
+
+- Marca como ejecutada la acción para que no aparezca en la agenda.
+- Incluye en ella la fecha de realización dentro de una propiedad *LOGBOK*
+
+Se ve mas calro en este ejemplo:
+
+#+BEGIN_EXAMPLE
+   DONE Preparar el día.
+   CLOSED: [fecha hora] SCHEDULED: <fecha +0d>
+   :PROPERTIES:
+   :STYLE:    habit
+   :LAST_REPEAT: [fecha hora]
+   :END:
+   :LOGBOOK:
+   - State "DONE"       from "HACER:"       [fecha hora]
+   :END:
+#+END_EXAMPLE
+
+Como consecuencia de estos cambios la entrada ya no será visible en la agenda al verificar las fechas pasadas, pero todas las instancias futuras serán visibles, eso si con las condiciones que veremos más adelante.
+
+Por último señalar que disponemos de dos marcadores más, *.+* y *++*, que nos ayudan aún más para definir acciones repetitivas.  Los vemos con algunos ejemplos.
+
+#+BEGIN_EXAMPLE
+  ** HACER: Llamar a mi padre.
+     DEADLINE: <fecha ++1w>
+#+END_EXAMPLE
+
+Al marcar esta acción como *DONE* cambiará la fecha  en una semana, pero siempre en el futuro y manteniendo el mismo día de la semana (domingo).
+
+#+BEGIN_EXAMPLE
+  ** HACER: Sacar la basura
+     DEADLINE: <fecha hora ++1d>
+#+END_EXAMPLE
+
+En este caso hemos incluido una hora por lo que si marcamos la entrada como realizada antes de la hora señalada volvera a generar la fecha en el mismo día.
+
+#+BEGIN_EXAMPLE
+  ** HACER: Cambiar las pilas del reloj
+     DEADLINE: <fecha .+1y>
+#+END_EXAMPLE
+
+En este caso la siguiente repetición se creará, pero no un año después de la fecha prevista, sino un año después de la fecha en que se marque como ejecutada.
+
+Para finalizar aclarar que en los casos en que dispongamos de información de programación y fecha límite (práctica que no creo aconsejable en *GTD*), si la repetición se configura sólo para la fecha de programación, lo lógico es que la repetición deba ignorarse a partir de la fecha límite.  Esto se puede controlar con la variable *org-agenda-skip-scheduled-if-deadline-is-shown to repeated-after-deadline*. Si queremos que  la información de la programación y la fecha límite se repitan en las mismas condiciones habrá que configurar el mismo repetidor para ambas.
+
+** Gestión del hábito.
+
+Todo lo anterior está muy bien pero parece algo lioso y además nos presenta un pequeño problema, ya que al establecer por ejemplo una acción con repeticiones diarias, esta nos aparecería cada día en la agenda, lo que la hace poco útil, ya que sólo nos interesa la primera repetición que tengamos pendiente, no una agenda sobrecargada de acciones que en este momento no nos interesan.
+
+Para solucionar esto *org-mode* nos lo pone fácil ya que incluye la capacidad de rastrear la consistencia de una categoría especial de *HACER:*, llamada precisamente "*hábit*".
+
+Para poder utilizar esta opción se deben cumplir estos requerimientos:
+
+1. Hemos habilitado el módulo *habits* en nuestro Emacs
+2. El hábito esta registrado como un elemento *HACER:*, con una palabra clave que representa un estado abierto (no olvidar que podemos personalizar las palabras que representan acciones abiertas)
+4. Es elemento tiene asociada una propiedad *STYLE* establecida con el valor *habit*
+5. La acción tiene una fecha programada con un intervalo de repetición
+6. También puede tener rangos mínimos y máximos especificados mediante el uso de la sintaxis *.+2d/3d*, que indican que debiera realizarse al menos cada tres días, pero como máximo cada dos días.
+7. Debemos tener habilitado el registro de estado para el estado *DONE* para que los datos históricos se representen en el gráfico de coherencia. Si no está habilitado no dará ningún error, pero los gráficos de consistencia no tendrán ningún significado. 
+
+Para hacernos una idea  veamos une ejemplo de una acción que cumple esos requisitos:
+
+#+BEGIN_EXAMPLE
+  ** HACER: preparar la agenda
+     SCHEDULED: <fecha .+2d/4d>
+     :PROPERTIES:
+     :STYLE:    habit
+     :LAST_REPEAT: [fecha hora]
+     :END:
+     - State "DONE"       from "HACER:"       [fecha]
+     - State "DONE"       from "HACER:"       [fecha]
+     - State "DONE"       from "HACER:"       [fecha]
+     - State "DONE"       from "HACER:"       [fecha]
+     - State "DONE"       from "HACER:"       [fecha]
+     - State "DONE"       from "HACER:"       [fecha]
+     - State "DONE"       from "HACER:"       [fecha]
+     - State "DONE"       from "HACER:"       [fecha]
+     - State "DONE"       from "HACER:"       [fecha]
+     - State "DONE"       from "HACER:"       [fecha]
+#+END_EXAMPLE
+
+La interpretación de este hábito sería que quiero preparar la agenda como máximo cada 2 días (según la fecha y el intervalo de repetición SCHEDULED ) y al menos cada 4 días. Si hoy estamo a 15/10, el hábito aparecerá por primera vez en la agenda el 17/10 y aparecerá cómo vencido, de no realizarse, el 19/10.
+
+Lo que a mí me esta resultando más útil acerca de los hábitos es que se muestran en la agenda junto con un gráfico de coherencia, para mostrar cómo llevamos la regla de *No romper la cadena*, tal y cómo vemos en esta pantalla:
+
+#+BEGIN_export html
+   <img src="../img/captura_org-habits.png" border="0"  width=100% alt="Captura de un hábito en org-mode"
+#+END_export
+
+Este gráfico muestra cuando hemos realizado la acción, es decir hemos seguido el hábito, en las últimas tres últimas semanas, con una clave de colores que nos ayudan a ver nuestra constancia, según este esquema:
+
+- Azul:     Si la acción aún no se había hecho ese día
+- Verde:    Si la acción se ha hecho ese día
+- Amarillo: Si la acción vence al día siguiente
+- Rojo:     Si la acción esta atrasada ese día
+
+Además de colorear cada día, también marca con un asterisco si la acción se ha realizado ese día, y un signo de exclamación para mostrar el día actual en el gráfico.
+
+*** Configuración de los hábitos.
+
+Cómo hemos visto en el punto anterior hay una serie de requisitos de configuración que son muy simples de cemplir (no explicaré el tema de las repeticiones que vimos antes).
+
+**** Habilitar el modulo habits.
+
+Tengo que decir que este ha sido mi primer acercamiento al los módulos en *org-mode* y aún no lo entiendo muy bien.  En cualquier caso *Sacha Chua* vino al rescate y a partir de su configuración de *Emacs* he podido activarlos con estas líneas en mi *ínit.el*.
+
+#+BEGIN_SRC elisp
+  (setq org-modules '(org-habit))
+  (eval-after-load 'org '(org-load-modules-maybe t))
+#+END_SRC
+
+**** Ajustar la propiedad *STYLE*.
+
+Para marcar una acción, con la propiedad de hábito, bastará con esta simple combinación de teclas:
+
+#+BEGIN_EXAMPLE
+  C-c C-x p
+#+END_EXAMPLE
+
+El *minibuffer* nos pedirá el nombre de la propiedad, que recordad es *STYLE* y su valor que será *habit*.
+
+**** Habilitar el registro de estado para las acciones realizadas.
+
+El registro de estado para las acciones realizadas, ya lo tenía activado, ya que aunque no lo use de forma habitual, me parece importante registrar la fecha en que una acción se ha finalizado.  Y además me apuesto lo que sea a que *org-mode* nos permitirá analizar esa información por fechas, lo que de cara a revisiones será fundamental, pero eso tocará otro día.
+
+La activación se hace incluyendo esta línea:
+
+#+BEGIN_SRC elisp
+  (setq org-log-done t)
+#+END_SRC
+
+El efecto es que al poner una acción en alguno de los estados de finalización que tengamos definidos incluirá esto:
+
+#+BEGIN_SRC elisp
+  CLOSED: <fecha hora>
+#+END_SRC
+
+**** Variables de configuración.
+
+Por último aclarar algunas variables que intervienen en la forma en que los hábitos se muestran en la agenda.
+
+- *org-habit-graph-column* Indica la columna de búfer en la que se debe dibujar el gráfico. Tened en cuenta que esto sobrescribirá cualquier texto en esa columna, por lo que es una buena idea mantener los títulos de los hábitos breves
+- *org-habit-preceding-days* Los dias, antes de hoy, que aparecerán en el gráfico de consistencia
+- *org-habit-following-days* Los días. después de hoy, que aparecerán en el gráfico de consistencia
+- *org-habit-show-habits-only-for-today*  Si es verdadero, solo muestra hábitos en la agenda de hoy, si no muestra tambien las siguientes apariciones.  Como hemos dicho por claridad esta establecido en verdadero de forma predeterminada.
+
+** Consideraciones finales. 
+ 
+Para terminar dos pequeños avisos.
+
+Lo primero es que disponemos de una pequeña utilidad para simplificar el manejo de la agenda.  Si en la vista agenda pulsamos *S-k* se desactivan los hábitos temporalmente y no aparecerán. Presionando de nuevo *S-k* volverán a aparecer.
+
+No olvidar tampoco que los hábitos también están sujetos al filtrado de etiquetas, es decir que si tenemos hábitos que solo deben realizarse en ciertos contextos, lo que si establecemos algún tipo de filtrado por estos conceptos no serán visibles.
+
+Y el último más práctico es que por el momento, hasta que establezca en este nuevo Blog que hago con la parte social y de comentario si alguno quiere comentar y participar en esta aventura de implementar *GTD* con *org-mode* puede unirse a este grupo de *Telegram*: [[https://t.me/org_mode_GTD][GTD y crecimiento personal con org-mode]].
+
+Un saludo y hasta pronto. 

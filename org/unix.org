@@ -1,29 +1,4 @@
-#+TITLE: uGeek - Blog de Tecnología
-#+LINK: https://ugeek.github.io/blog
-#+DESCRIPTION: Blog de Tecnología, Android, GNU Linux, Servidores, y mucho más. Blog vinculado al Blog del Podcast de uGeek
-#+KEYWORDS: GNU, linux, Raspberry, android, domótica 
-#+AUTHOR: Angel
-#+LANGUAGE: es
-#+STARTUP: logdone
-#+STARTUP: inlineimages
-#+OPTIONS: toc:t num:nil ^:nil toc:nil title:nil author:nil date:nil created:nil'
-#+startup: hideblocks
-#+HTML_HEAD: <div id="logo"><a href="index.html"><img src="__icon/ugeek.png" border="0"  width="90" height="90" alt="uGeek"></a></div>
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="__css/stylesheet.css" /><link rel="alternate" type="application/rss+xml" href="https://ugeek.gitlab.io/feed.xml" title="uGeek - Blog de Tecnología">   
-#+HTML_HEAD:  
-#+html: <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'/>
-#+html: <div id="name"><a href="index.html"><tt>Blog de Tecnología</tt></div></a>
-#+html: <div id="icon"><a href="https://ugeek.github.io/podcast.xml" title="rss"><img src="__icon/podcast.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="feed.xml"><img src="__icon/rss.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://twitter.com/ugeekpodcast"><img src="__icon/twitter.png"  width="25" height="25"></a>&nbsp;&nbsp;<a href="https://t.me/uGeek"><img src="__icon/telegram.png"  width="25" height="25" alt="uGeek"></a></div>
-#+html: <div id="menu"><a href="list.html"><tt>Artículos</tt></a>&nbsp;&nbsp;&nbsp;<a href="tag.html"><tt>Tags</tt></a>&nbsp;&nbsp;&nbsp;<a href="https://ugeek.github.io/"><tt>Podcast</tt></a></div>
-#+html: <div id="ugeek"><a href="index.html" title="uGeek"><tt>uGeek</tt></a></div>
-#+html:<br><br><br><br><br><br><br><br><br><br>                                                                                             
-
-
-
-
-
-
-* TODO Eliminar líneas en Blanco con sed
+* Eliminar líneas en Blanco con sed
 :PROPERTIES:
 :TITLE: Eliminar líneas en Blanco con sed
 :EXPORT_FILE_NAME: eliminar-lineas-en-blanco
@@ -98,4 +73,3 @@ Ejerció como crítico musical entre 1985 y 1997 en Ruta66, Rockdelux, ABC; Diag
 Ha sido además promotor y road manager de los artistas senegaleses Cheikh Lô, Daara J y Orchestra Baobab, así como de grupos jamaicanos (Skatalites, Wailers, Toots....).
  
 Su pasión por la geopolítica de África y Oriente Medio y el Movimiento Panafricanista Internacional -hasta hace poco, faceta oculta- llevó a nuestro hombre a publicar con su nombre real, Jordi López Gil, una serie de artículos de análisis internacional en el digital [[http://diario16.com/author/jordi-lopez-gil/][Diario16]]
-
